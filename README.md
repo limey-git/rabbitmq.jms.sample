@@ -30,7 +30,7 @@ This is the stdout for a run...
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.2.5.RELEASE)
 
-2015-07-12 17:21:44.479  INFO 8344 --- [           main] pommie.twit.jms.StockQuoter              : Starting StockQuoter v0.0.0-alpha on boyd with PID 8344 (D:\development\projects\mule\BGLpractice\target\BGLpractice-0.0.0-alpha.jar started by williamcboyd in D:\development\projects\mule\BGLpractice)
+2015-07-12 17:21:44.479  INFO 8344 --- [           main] pommie.twit.jms.StockQuoter              : Starting StockQuoter v0.0.0-alpha on limey-git with PID 8344 (D:\*** started by pommie.twit in D:\***)
 2015-07-12 17:21:44.620  INFO 8344 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7213a906: startup date [Sun Jul 12 17:21:44 BST 2015]; root of context hierarchy
 2015-07-12 17:21:46.788  INFO 8344 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.scheduling.annotation.SchedulingConfiguration' of type [class org.springframework.scheduling.annotation.SchedulingConfiguration$$EnhancerBySpringCGLIB$$1ea51b25] is not eligible for getting processed by all BeanPostProcessors (for example:
 2015-07-12 17:21:46.835  INFO 8344 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$b7b72878] is not eligible for getting processed by all BeanPostProcessors (
