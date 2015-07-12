@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -34,6 +35,7 @@ import com.rabbitmq.jms.admin.RMQConnectionFactory;
 /**
  * 
  * @author Greg Turnquist
+ * @author limey-git
  *
  */
 @EnableAutoConfiguration
@@ -60,6 +62,7 @@ public class StockQuoter {
 
 	@Autowired
 	JmsTemplate jmsTemplate;
+	
 
 	@Bean
 	ConnectionFactory connectionFactory( ) {
@@ -94,10 +97,12 @@ public class StockQuoter {
 
 		jmsTemplate.send( "rabbit-trader-channel", messageCreator );
 	}
-
-	public static void main( String[ ] args ) {
+	
+	public static void main( String[ ] args ) throws InterruptedException {
 		ApplicationContext ctx = SpringApplication.run( StockQuoter.class, args );
 		log.info( "connectionFactory => " + ctx.getBean( "connectionFactory" ) );
+		
+		Thread.sleep( 1000 * 60 );
+		((AnnotationConfigApplicationContext)ctx).close( );
 	}
-
 }
